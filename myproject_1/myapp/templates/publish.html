@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>旺享 | MYFOLLOW</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="always" name="referrer">
+	<meta name="description" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+	<meta itemprop="name" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+	<meta name="keywords" content="旺享，旺享笔记，文章分享，学习社区，原创文章平台，分享有趣的知识">
+	<link rel="shortcut icon" type="image/x-icon" href="http://192.168.43.168/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://192.168.43.168/css/myfollow.css">
+	<link rel="stylesheet" type="text/css" href="http://192.168.43.168/css/homepage.css">
+	<link rel="stylesheet" type="text/css" href="http://192.168.43.168/css/pagefoot.css">
+	<link rel="stylesheet" type="text/css" href="http://192.168.43.168/css/lword.css">
+	<link rel="stylesheet" type="text/css" href="http://192.168.43.168/css/sharecontent.css">
+	<script type="text/javascript" src="http://192.168.43.168/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="http://192.168.43.168/js/publish.js"></script>
+	<script type="text/javascript" src="http://192.168.43.168/js/lword.js"></script>
+</head>
+<body>
+	<div class="myfollowhead">
+		<div>
+			<ul>
+				<li><a id="nickname" href="http://127.0.0.1/mynotes/publish/">发表</a></li>
+				<li><a href="#">统计</a></li>
+				<li><a href="#">其他</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="subject">{% csrf_token %}
+		<div class="subject-content">
+			{% for sharelist in share %}
+			<div class="w">
+				<div class="header" id="subject_header">
+					<img src="http://192.168.43.168/img/bj.png">
+					<h4>{{ sharelist.0 }}</h4>
+					<a id="title" href="#">{{ sharelist.1 }}</a>
+				</div>
+				<div class="content">
+					<p>
+						{{ sharelist.2 }}
+					</p>
+				</div>
+				<div class="foot" id="foot">
+					<div>
+						<img id="home_user" src="http://192.168.43.168/img/home-user.png"><span>{{ sharelist.3 }}</span>
+					</div>
+					<div>
+						<img src="http://192.168.43.168/img/time.png"><span>{{ sharelist.4 }}</span>
+					</div>
+					<div>
+						<img id="dzanimg" src="http://192.168.43.168/img/dzan-start.png"><span>{{ sharelist.5 }}</span>
+					</div>
+					<div>
+						<img title="浏览量" src="http://192.168.43.168/img/look_num.png">
+						<span>{{ sharelist.6 }}</span>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			<div class="sharecontent">
+				<h2>这是一个测试标题</h2>
+				<div></div>
+			</div>
+		</div>
+		{% include 'lword.html' %}
+	</div>
+	<img id="gohome" src="http://192.168.43.168/img/mynotes-home.png">
+	{% include 'web_shortcut.html' %}
+	{% include 'pagefoot.html' %}
+	{% include 'web_push.html' %}
+</body>
+</html>

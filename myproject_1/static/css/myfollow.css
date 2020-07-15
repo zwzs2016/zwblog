@@ -1,0 +1,179 @@
+body,div,h1,h2,h3,h4,h5,ul,li,p,img,textarea,input{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+
+}
+.myfollowhead{
+	width: 100%;
+	height: 63px;
+	background: #FFF9C4;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+.myfollowhead div{
+	width: 1002px;
+	height: 63px;
+	/*background-color: #000;*/
+	margin: auto;
+}
+.myfollowhead ul{
+	width: 100%;
+	height: 63px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.myfollowhead li{
+	width: 92px;
+	height: 61px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px solid transparent;
+	transition: .4s;
+}
+.myfollowhead li:hover{
+	border-bottom: 2px solid #FF5733 ;
+	transition: .4s;
+}
+.myfollowhead a{
+	line-height: 63px;
+	text-align: center;
+	color: #000;
+	font-size: 18px;
+	font-weight: normal;
+}
+.subject{
+	overflow: hidden;
+	overflow-y: hidden;
+	background-color:  #111;
+}
+.subject-content{
+	top: 0;
+	margin-bottom: 102px;
+	background-color: red;
+}
+.nicknamelist{
+	display: none;
+	width: 643px;
+	height: 436px;
+	background-color: #fff;
+	position: fixed;
+	top: 23px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 13px;
+	opacity: 0;
+	box-shadow: 0px 0px 9px #AED6F1;
+}
+.nicknamelist ul{
+	width: 100%;
+	height: 436px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+	overflow-y: auto;
+}
+.nicknamelist li{
+	width: 53px;
+	height: 53px;
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 50%;
+	background-color: #fff;
+	margin-left: 23px;
+	margin-bottom: 13px;
+}
+.nicknamelist li{
+	color: #000;
+	line-height: 53px;
+	transition: .3s;
+}
+.nicknamelist a{
+	color: #000;
+}
+.nicknamelist li:hover{
+	box-shadow: 0px 0px 9px #AED6F1;
+	transition: .3s;
+}
+.nicknamelist img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 26px;
+	height: 26px;
+	transition: .3s;
+}
+.nicknamelist img:hover{
+	width: 29px;
+	height: 29px;
+	transition: .3s;
+}
+.sharecontent{
+	display: none;
+}
+#gohome{
+	width: 30px;
+	height: 30px;
+	opacity: .2;
+	transition: .5s;
+	position: fixed;
+	top: 78px;
+	right: 73px;
+}
+#gohome:hover{
+	width: 35px;
+	height: 35px;
+	opacity: 1;
+	transition: .5s;
+}
+/*web_shortcut.html*/
+.top-scroll{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom:17px;
+	right: 6px;
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	background-color: #F5B041;
+	box-shadow: 0 7px 9px #D3D3D3;
+	z-index: 999;
+}
+.top-scroll:hover{
+	transition: 1s;
+	background-color: #F4A460;
+}
+.top-scroll img{
+	width: 21px;
+	height: 21px;
+}
+
+
+::-webkit-scrollbar { /* 血槽宽度 */ 
+ width: 5px; height: 5px; 
+} 
+::-webkit-scrollbar-thumb { /* 拖动条 */ 
+ background-color: rgb(255,184,108); 
+ border-radius: 5px; 
+} 
+::-webkit-scrollbar-track { /* 背景槽 */ 
+ background-color: #FFF9C4; 
+ border-radius: 5px; 
+} 

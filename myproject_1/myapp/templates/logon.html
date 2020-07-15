@@ -1,0 +1,113 @@
+<!--
+	Author: W3layouts
+	Author URL: https://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: https://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+    <title>旺享 | 登录</title>
+    <!-- Meta-Tags -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="always" name="referrer">
+    <meta name="description" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+    <meta itemprop="name" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+    <meta name="keywords" content="旺享，旺享笔记，文章分享，学习社区，原创文章平台，分享有趣的知识">
+    <link rel="shortcut icon" type="image/x-icon" href="http://192.168.43.168/img/favicon.ico">
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="http://192.168.43.168/css/style.css" type="text/css" media="all">
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- //fonts -->
+    <!-- <link rel="stylesheet" href="http://192.168.43.168/css/font-awesome.css" type="text/css" media="all"> -->
+    <!-- //Font-Awesome-File-Links -->
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <script type="text/javascript" src="http://192.168.43.168/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="http://192.168.43.168/js/logon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+    <h1 class="title-agile text-center">Sharing notes</h1>
+    <div class="content-w3ls">
+        <div class="content-bottom">
+            <form action="" method="post">{% csrf_token %}
+                <div class="field-group">
+                    <span class="fa fa-user" aria-hidden="true"><img src="http://192.168.43.168/img/email.png"></span>
+                    <div class="wthree-field">
+                        <input name="text1" id="text1" type="email" value="" placeholder="username" required>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <span class="fa fa-lock" aria-hidden="true"><img src="http://192.168.43.168/img/psd.png"></span>
+                    <div class="wthree-field">
+                        <input name="password" id="myInput" type="Password" placeholder="password" required oninvalid="setCustomValidity('请输入您的密码');" oninput="setCustomValidity('');">
+                        <img id="psdimg" src="http://192.168.43.168/img/error.png">
+                    </div>
+                </div>
+                <div class="field-groupct">
+                    <div class="check">
+                        <label class="checkbox w3l">
+                            <input type="checkbox" onclick="myFunction()">
+                            <i> </i>show password</label>
+                    </div>
+                    <div class="register">
+                        <a href="../register">register</a>
+                    </div>
+                    <!-- script for show password -->
+                    <script>
+                        function myFunction() {
+                            var x = document.getElementById("myInput");
+                            if (x.type === "password") {
+                                x.type = "text";
+                            } else {
+                                x.type = "password";
+                            }
+                        }
+                    </script>
+                    <!-- //script for show password -->
+                </div>
+                <div class="wthree-field">
+                    <input class="loginbutton" id="saveForm" name="saveForm" type="submit" value="sign in" >
+                </div>
+                <ul class="list-login">
+                    <li class="switch-agileits">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                            keep me signed in
+                        </label>
+                    </li>
+                    <li>
+                        <a href="./register" class="text-right">forgot password?</a>
+                    </li>
+                    <li class="clearfix"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        <p>© 2018 Prime login Form. All rights reserved | Design by
+            <a href="https://w3layouts.com">W3layouts</a>
+        </p>
+    </div>
+    {% include 'web_push.html' %}
+</body>
+<!-- //Body -->
+</html>

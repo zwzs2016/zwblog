@@ -1,0 +1,201 @@
+<!--
+	Author: W3layouts
+	Author URL: https://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: https://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+    <title>旺享 | 注册</title>
+    <!-- Meta-Tags -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="always" name="referrer">
+    <meta name="description" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+    <meta itemprop="name" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+    <meta name="keywords" content="旺享，旺享笔记，文章分享，学习社区，原创文章平台，分享有趣的知识">
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://192.168.43.168/img/favicon.ico">
+    <link rel="stylesheet" href="http://192.168.43.168/css/style.css" type="text/css" media="all">
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- //fonts -->
+    <!-- <link rel="stylesheet" href="http://192.168.43.168/css/font-awesome.css" type="text/css" media="all"> -->
+    <!-- //Font-Awesome-File-Links -->
+    <script type="text/javascript" src="http://192.168.43.168/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="http://192.168.43.168/js/register.js"></script>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+    <h1 class="title-agile text-center">Sharing notes</h1>
+    <div class="content-w3ls">
+        <div class="content-bottom">
+            <form action="../registerok/" method="post">{% csrf_token %}
+                <div class="field-group">
+                    <span class="fa fa-user" aria-hidden="true"><img src="http://192.168.43.168/img/email.png"></span>
+                    <div class="wthree-field">
+                        <input name="text1" id="text1" type="email" value="" placeholder="邮箱" required >
+                    </div>
+                </div>
+                <div class="field-group">
+                    <span class="fa fa-lock" aria-hidden="true"><img src="http://192.168.43.168/img/psd.png"></span>
+                    <div class="wthree-field">
+                        <input name="password" id="myInput" type="Password" placeholder="输入密码" pattern="(?=.*([a-zA-Z].*))(?=.*[0-9].*)[a-zA-Z0-9-*/+.~!@#$%^&*()]{6,20}$" title="密码至少6-20位包含数字跟字母,可以有字符" required>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <span class="fa fa-lock" aria-hidden="true"><img src="http://192.168.43.168/img/psd.png"></span>
+                    <div class="wthree-field">
+                        <input name="password2" id="myInput2" type="Password" placeholder="再次输入密码" required >
+                        <input type="hidden" name="key" id="hidden">
+                    </div>
+                        <script>
+                        $("#myInput2").keyup(function(){
+                           var psd=$("#myInput").val();
+                           var psd1=$("#myInput2").val();
+                           var email=$("#text1").val();
+                            if(psd!=psd1){
+                                $("#myInput2").addClass("psdinvalid");
+                                $("#saveForm").attr('type','button');
+                                $("#saveForm").addClass("button");
+                            }
+                            else{
+                                $("#myInput2").removeClass("psdinvalid");
+                        //         $.ajaxSetup({
+                        //     beforeSend: function (xhr, settings) {
+                        // if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        //     xhr.setRequestHeader("X-CSRFToken", $.cookie('csrftoken'));
+                        //         }
+                        //     }
+                        // });
+                                $.ajax({
+                                    type:"post",
+                                    // headers: {"X-CSRFtoken":$.cookie("csrftoken")},
+                                    url:'http://127.0.0.1/isregister/',
+                                    data:{
+                                        "email":email,
+                                        "psd":psd,
+                                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                                    },
+                                    timeout:3000,
+                                    asyc:true
+                                })
+                                .done(function(data){
+                                        if (data!=0) {
+                                            console.log(data);
+                                            $("#hidden").attr('value',data)
+                                            $("#saveForm").attr('value','注册');
+                                            $("#saveForm").attr('type','submit');
+                                        }else{
+                                            console.log(data);
+                                            $("#saveForm").attr('value','账号已被注册');
+                                            return false;
+                                        }
+                                    })
+                                .fail(function(){
+                                    console.log("Flase");
+                                })
+                            } 
+                        })
+                    </script>
+                </div>
+                <div class="field-groupct">
+                    <div class="check">
+                        <label class="checkbox w3l">
+                            <input type="checkbox" onclick="myFunction()">
+                            <i> </i>show password</label>
+                    </div>
+                    <div class="register">
+                        <a href="http://127.0.0.1/login/">sign in</a>
+                    </div>
+                    <!-- script for show password -->
+                    <script>
+                        function myFunction() {
+                            var x = document.getElementById("myInput");
+                            var y = document.getElementById("myInput2")
+                            if (x.type === "password") {
+                                x.type = "text";
+                            } else {
+                                x.type = "password";
+                            }
+                             if (y.type === "password") {
+                                y.type = "text";
+                            } else {
+                                y.type = "password";
+                            }
+                        }
+                    </script>
+                    <!-- //script for show password -->
+                </div>
+                <div class="wthree-field">
+                    <input id="saveForm" name="saveForm" type="submit" value="注 册" >
+                    <script>
+                        function oksubmit(){
+                            var res=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                            var res1=/(?=.*([a-zA-Z].*))(?=.*[0-9].*)[a-zA-Z0-9-*/+.~!@#$%^&*()]{6,20}$/;
+                            var str=$("#text1").val();
+                            var psd=$("#myInput").val();
+                            var psd1=$("#myInput2").val();
+                            if(!res.test(str)){
+                                return false;
+                            }
+                            else if(!res1.test(str1)){
+                                return false;
+                            }
+                            else{
+                                $("#saveForm").click(function(){
+                                    if(psd!=psd1){
+                                    $("input[name='password2']").val("");
+                                    alert("false");
+                                    return false;
+                                    }
+                                    else{
+                                        $("#saveForm").removeClass("button");
+                                    } 
+                                })
+                            } 
+                        }
+                        oksubmit();
+                    </script>
+                </div>
+                <ul class="list-login">
+                    <li class="switch-agileits">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                            keep me signed in
+                        </label>
+                    </li>
+                    <li>
+                        <a href="#" class="text-right">forgot password?</a>
+                    </li>
+                    <li class="clearfix"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div class="copyright text-center">
+        <p>© 2019 Prime login Form. All rights reserved | Design by
+            <a href="https://w3layouts.com">W3layouts</a>
+        </p>
+    </div>
+    {% include 'web_push.html' %}
+</body>
+<!-- //Body -->
+</html>

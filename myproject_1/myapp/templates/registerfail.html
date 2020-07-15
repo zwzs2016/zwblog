@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>旺享 | 激活注册</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="always" name="referrer">
+	<meta name="description" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+	<meta itemprop="name" content="旺享笔记，一个分享知识和学习交流的社区，值得大家收藏的原创文章网站">
+	<meta name="keywords" content="旺享，旺享笔记，文章分享，学习社区，原创文章平台，分享有趣的知识">
+	<script type="text/javascript" src="http://192.168.43.168/js/jquery-3.4.1.min.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="http://192.168.43.168/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://192.168.43.168/css/registerok.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="zc">
+		<div>
+			<h1>失败!</h1>
+			<h2>注册失败</h2>
+			<h3>邮箱或服务错误</h3>
+		</div>
+	</div>
+	<script>
+		$(".zc div").hover(function(){
+			$(this).animate({
+				opacity:1,
+				width:'+=20px',
+				height:'+=20px'
+			},'slow',function(){});
+		},function(){
+			$(this).animate({
+				opacity:0.9,
+				width:'-=20px',
+				height:'-=20px'
+			},'slow',function(){});
+		});
+	</script>
+	{% include 'web_push.html' %}
+</body>
+</html>

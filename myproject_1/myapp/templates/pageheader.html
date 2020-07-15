@@ -1,0 +1,99 @@
+<div class="top">
+		<div class="top-content" id="top-content">
+			<h1>Mad</h1>
+			<h2 id="timenow">web</h2>
+		</div>
+<!-- 		<div class="top-poetry">
+			<h3>君生我未生，我生君已老</h3>
+		</div> -->
+	</div>
+	<div class="top-classify" id="top-classify">
+		<div class="search_content" id="search">
+			<img v-bind:title="message" src="http://192.168.43.168/img/search_content.png">
+			<input type="text" name="search_content" placeholder="" maxlength="30">
+		</div>
+		<ul>
+			<li id="classify1"><a href="http://127.0.0.1/">首 页</a></li>
+			<li id="classify2"><a href="#">记 录</a></li>
+			<li id="classify3"><a href="http://127.0.0.1/share/">分 享</a></li>
+			<li id="classify4"><a href="http://127.0.0.1/study/">学 习</a></li>
+			<li id="classify5"><a href="http://127.0.0.1/mynotes/">我 的</a></li>
+		</ul>
+		<div class="imgout" id="imgout">
+			<img v-bind:title="message" src="http://192.168.43.168/img/arrow1.png">
+		</div>
+		<div class="userlogin" id="userlogin">
+			<img v-bind:title="message" id="loginimg" src="http://192.168.43.168/img/login.png">
+			<img v-bind:title="message" id="logoutimg" src="http://192.168.43.168/img/logout.png">
+		</div>
+	</div>
+		<div class="show-mid">
+		<div class="show" id="show">
+		<ul>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+		<ul id="showli2">
+			<li><a href="http://127.0.0.1/share?sharefamily=生活">生活</a></li>
+			<li><a href="http://127.0.0.1/share?sharefamily=美食">美食</a></li>
+			<li><a href="http://127.0.0.1/share?sharefamily=娱乐">娱乐</a></li>
+		</ul>
+		<ul id="showli3">
+			<li><a href="http://127.0.0.1/share?sharefamily=知识">知识</a></li>
+			<li><a href="http://127.0.0.1/share?sharefamily=心情">心情</a></li>
+			<li><a href="http://127.0.0.1/share?sharefamily=文章">文章</a></li>
+		</ul>
+		<ul id="showli4">
+			<li><a href="http://127.0.0.1/share?sharefamily=语言">语言</a></li>
+			<li><a href="http://127.0.0.1/share?sharefamily=理学">理学</a></li>
+			<li><a href="http://127.0.0.1/share?sharefamily=文学">文学</a></li>
+		</ul>
+		<ul id="showli5">
+			<li><a href="">5X</a></li>
+			<li><a href="">XX</a></li>
+			<li><a href="">XX</a></li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	var app1=new Vue({
+		el:"#loginimg",
+		data:{
+			message:"登录"
+		}
+	});
+	var app2=new Vue({
+		el:"#logoutimg",
+		data:{
+			message:"注销"
+		}
+	})
+	var app3=new Vue({
+		el:"#search img",
+		data:{
+			message:"搜索"
+		}
+	})
+
+	var app4=new Vue({
+		el:"#imgout img",
+		data:{
+			message:"收起"
+		}
+	})
+
+	var app5=new Vue({
+		el:"#imgout img",
+		data:{
+			message:"收起"
+		}
+	})
+
+	var nowtime=new Vue({
+		el:"#timenow",
+		data:{
+			timenow:new Date().toLocaleTimeString()
+		}
+	})
+</script>

@@ -1,0 +1,27 @@
+.pagefoot{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top:1px solid #FF5733; 
+	width: 100%;
+	position: relative;
+}
+.pagefoot div{
+	width: 1002px;
+	height: 56px; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+.pagefoot p{
+	line-height: 18px;
+	margin-top: 9px;
+	font-size: 12px;
+	font-weight: 400;
+	
+}
+a{
+	text-decoration: none;
+}

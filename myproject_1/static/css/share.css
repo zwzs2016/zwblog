@@ -1,0 +1,10 @@
+body,div,h1,h2,h3,h4,h5,ul,li,p,img,textarea,input{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}

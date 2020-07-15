@@ -1,0 +1,14 @@
+body,div,h1,h2,h3,h4,h5,ul,li,p,textarea{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+body{
+	overflow-x: scroll;
+	overflow-x:hidden
+}
+a{
+	text-decoration: none;
+}

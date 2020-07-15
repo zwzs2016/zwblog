@@ -1,0 +1,463 @@
+body,div,h1,h2,h3,h4,h5,ul,li,p,img,textarea,input{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	overflow-x: hidden;
+}
+.subject{
+	position: relative;
+	top:-144px;
+	width: 100%;
+	min-height: 1500px;
+	background-color: #FFF9C4;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+.subject-content{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	width: 1002px;
+}
+.subject-content img{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 112px 0px 25px 0px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.subject-info{
+	display: none;
+	position: relative;
+}
+.subject-info form{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	width: 200px;
+	height: 150px;
+}
+.subject-info input[type='text']{
+	width: 183px;
+	height: 52px;
+	border: 3px solid #2C3E50;
+	outline: none;
+	border-radius: 27px;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.subject-info div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .4s;
+	width: 50px;
+	height: 50px;
+	background-color: #A1887F;
+	border-radius: 50%;
+}
+.subject-info div img{
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+.subject-info div:hover{
+	transition: all .4s;
+	background-color: #2C3E50;
+}
+.subject .mynotes{
+	display: none;
+	width: 801.6px;
+	height: 614px;
+	margin-bottom: 22px;
+	border-radius: 10px;
+	background-color: #fff;
+	/*box-shadow: 0 0 0*/
+}
+.subject .mynotes #div2{
+	height: 542px;
+	overflow-y: hidden;
+}
+.subject .mynotes .w-e-toolbar{
+	visibility: hidden;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 5px;
+    justify-content: center;
+    height: 0px;
+}
+.subject .mynotes #div2 .w-e-text{
+	padding: 0 10px;
+	overflow-y: auto;
+}
+.subject .mynotes #div1{
+	width: 801.6px;
+}
+.subject .mynotes div:nth-of-type(2){
+	width: 100%;
+	height: 100%;
+}
+
+.subject .mynotes #text1{
+	visibility: hidden;
+	width: 100%;
+	height: 575px;
+	outline: none;
+	font-size: 18px;
+	border-radius: 10px;
+	border: 1px solid #FFF9C4;
+	font-weight: bold;
+	color: #000;
+}
+.mynotes input{
+	width: 100%;
+	height: 37px;
+	border-bottom: 2px dotted #000;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	outline: none;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.subject .setting{
+	display: flex;
+	width: 43px;
+	height: 43px;
+	position: absolute;
+	top: 0px;
+	left: 12px;
+}
+.subject .setting img{
+	display: none;
+	width: 35px;
+	height: 35px;
+	transition: all .6s;
+}
+.subject .setting img:hover{
+	width: 43px;
+	height: 43px;
+	transition: all .6s;
+}
+.subject .setting-content{
+	position: absolute;
+	top: 35px;
+	left: 0px;
+	width: 0px;
+	height: 433px;
+	/*background-color: #A1887F;*/
+}
+.subject .setting-content div{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: 
+	background-color:red;
+}
+.subject .setting-content div span{
+	display: none;
+	margin-top: 38px;
+	margin-left: 0px;
+}
+.subject .setting-content div span:hover{
+	transition: .25s;
+	color:  #F5B041;
+}
+.subject .setting-content div img{
+	display: none;
+	width: 30px;
+	height: 30px;
+	margin-top: 38px;
+	margin-left: 43px;
+}
+#subbutton{
+	display: none;
+	width: 147px;
+	height: 52px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#subbutton img{
+	margin: auto;
+	transition: .7s;
+	opacity: .3;
+}
+#subbutton img:nth-of-type(2){
+	width: 37px;
+	height: 37px;
+}
+#subbutton img:nth-of-type(1){
+	width: 41px;
+	height: 41px;
+}
+#subbutton img:hover{
+	transition: .7s;
+	opacity: 1;
+}
+#mynotesshare,#mynotessave{
+	display: none;
+}
+#lamp,#news,#handbook,#spot,#record,#editor,#fontup,#fontdown{
+	display: none;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 156px;
+	transition: .6s;
+	opacity: .8;
+}
+#news{
+	top: 50px;
+}
+
+#lamp{
+	opacity: .8;
+	top: 112px;
+
+}
+#spot{
+	top: 43px;
+	right: 141px;
+	opacity: .1;
+	width: 32px;
+	height: 32px;
+}
+#handbook{
+	top: 174px;
+}
+#editor{
+	top: 226px;
+}
+#record{
+	top: 278px;
+}
+#fontup{
+	top: 493px;
+}
+#fontdown{
+	top: 545px;
+}
+#news:hover,#lamp:hover,#handbook:hover,#record:hover,#editor:hover,#fontup:hover,#fontdown:hover{
+	width: 46px;
+	height: 46px;
+	transition: .6s;
+	opacity: 1;
+}
+.subject #saved{
+	display: flex;
+	position: absolute;
+	top: 413px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 98px;
+	height: 42px;
+	justify-content: space-between;
+	align-items: center;
+	opacity: 0;
+}
+.subject #saved img{
+	width: 37px;
+	height: 37px;
+}
+.subject #saved span{
+	color: #d81e06;
+	font-size: 18px;
+}
+.subject .record_events{
+	display: none;
+	width: 912px;
+	min-height: 1500px;
+	overflow: hidden;
+}
+.record_events ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: 100%;
+}
+.record_events li{
+	height: 53px;
+	margin-bottom: 16px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px dotted #FF5733 ;
+	border-radius: 15px;
+	opacity: .6;
+	transition: .6s;
+}
+.record_events li h4{
+	width: 281px;
+	height: 47px;
+	line-height: 47px;
+	font-size: 18px;
+	color: #000;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.record_events img{
+	width: 32px;
+	height: 32px;
+}
+.record_events li:hover{
+	opacity: 1;
+	transition: .6s;
+}
+.fix_tips{
+	display: flex;
+	position: absolute;
+	top: 0;
+	z-index: 1010;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+.tips{
+	margin-left: auto;
+	margin-right: auto;
+	width: 295px;
+	height: 124px;
+	position: fixed;
+	top: -1000px;
+	z-index: 1020;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	border: 1px solid #EDBB99;
+	border-radius: 13px;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px #D0D3D4;
+/*	background-color: red;*/
+}
+.tips img{
+	width: 23px;
+	height: 23px;
+}
+.tips div:nth-of-type(1){
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	justify-content: center;
+	width: 295px;
+	height: 36px;
+	border-bottom: 1px solid #000;
+}
+.tips h4{
+	width: 132px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #E53935;
+}
+.tips div:nth-of-type(2){
+	width: 295px;
+	height: 72px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.tips button{
+	position: relative;
+	width: 54px;
+	height: 31px;
+	outline: none;
+	background-color: #fff;
+	border-style: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	margin-left: 9px;
+	margin-right: 9px;
+	border-radius: 7px;
+	transition: .6s;
+
+}
+.tips button:nth-of-type(1){
+	background-color: #FF5733;
+	transition: .4s;
+}
+.tips button:nth-of-type(2){
+	background-color: #D7DBDD;
+	transition: .4s;
+}
+.tips button:nth-of-type(1):hover{
+	transition: .4s;
+	background-color: #F44336;
+	box-shadow: 0 0 12px #FF5733;
+}
+.tips button:nth-of-type(2):hover{
+	transition: .4s;
+	background-color: #D7DBDD;
+	box-shadow: 0 0 12px #D7DBDD;
+}
+.sharefamily{
+	position: fixed;
+	top: -1000px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1144;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*background-color: red;*/
+	background-color: #fff;
+	width: 148px;
+	height: 286px;
+	border-radius: 9px;
+	box-shadow: 0 0 19px #D0D3D4;
+}
+.sharefamily h4{
+	width: 148px;
+	height: 43px;
+	text-align: center;
+	line-height: 43px;
+	border-bottom: 1px solid #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+.sharefamily button{
+	width: 148px;
+	height: 38px;
+	line-height: 43px;
+	text-align: center;
+	outline: none;
+	background-color: #fff;
+	border-style: none;
+}
+.sharefamily button:hover{
+	background-color:#FF5733;
+	transition: .6s; 
+}
+#follow{
+	color: #000;
+}
+#follow:hover{
+	transition: .25s;
+	color:  #F5B041;
+}
