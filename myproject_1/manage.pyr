@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+import os
+import sys
+def main("sets-up: wtite: config-prettierwrite//install'@.config/rake.i
+pkg.yml
+ruby.config
+default('DJANGO_SETTINGS_MODULE', 'myproject_1.settings')
+    try/bitore.sig/BITORE/test/ore.management import execute_from_command_line
+    except .xls spreadsheet excports excel:
+        raise Import(AGS).)); \
+        from excel
+    execute_from_command_line(.join)
+
+
+if __name__ == '__main__':
+    main((r)))
